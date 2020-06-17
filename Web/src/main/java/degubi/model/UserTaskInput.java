@@ -2,16 +2,16 @@ package degubi.model;
 
 import javax.json.bind.annotation.*;
 
-public final class TaskInput {
+public final class UserTaskInput {
     
     public final String userSource;
     public final String userFileName;
     public final String taskName;
 
     @JsonbCreator
-    public TaskInput(@JsonbProperty("userSource") String rawUserSource,
-                     @JsonbProperty("userFileName") String userFileName,
-                     @JsonbProperty("taskName") String taskName) {
+    public UserTaskInput(@JsonbProperty("userSource") String rawUserSource,
+                         @JsonbProperty("userFileName") String userFileName,
+                         @JsonbProperty("taskName") String taskName) {
         
         this.userSource = prepareUserSource(rawUserSource);
         this.userFileName = userFileName;
